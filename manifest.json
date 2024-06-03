@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Video Data Extractor",
+  "version": "1.0",
+  "description": "Extract data from a video in progress when the button is pressed",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
